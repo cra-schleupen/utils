@@ -1,0 +1,71 @@
+" nicht mit vi kompatible verhalten
+" set nocompatible
+
+syntax on
+set mouse=a
+set cursorline " highlight current line
+:highlight Cursorline cterm=bold ctermbg=black
+set showmatch " show match part of braches pairs
+
+set encoding=utf-8
+set history=1000
+set number
+set scrolloff=7
+set foldcolumn=1
+
+" search
+set ignorecase " search case insensitive
+set smartcase " search via smartcase
+set incsearch " search incremental
+set hlsearch " suche highlighten
+
+" python
+autocmd BufWritePre *.py :%s/\s\+$//e " remove trailing whitespace
+
+" undo config
+set undofile
+set undodir=$HOME/.vim/undo_dir
+set undolevels=1000
+
+" alle Auswahlmöglichkeiten in der Autovervollständigung
+set completeopt=menu,menuone,noselect
+set wildmenu
+
+" tab in leerzeichen
+" filetype plugin indent on
+set autoindent " autoindent in new line
+set expandtab " space characters instead of tab
+set tabstop=2 " tab equals 2 spaces
+set shiftwidth=4 " add 4 whitespaces in normal mode
+
+" buffer nicht automatisch entladen
+set hidden
+
+" Custom shortcuts
+"" save
+map <f2> :w<cr>
+imap <f2> <esc>:w<cr>l
+vmap <f2> <esc>:w<cr>
+"" map leader
+let mapleader=" "
+""" quit
+map <leader>q :q<cr>
+" map <leader># `<cr>
+
+""" Fenster wechseln
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+""" Background schieben
+map <leader>z <C-z>
+
+""" set syntax to yaml
+:nnoremap <f3> :set syntax=yaml<cr>
+
+""" German keyboard alternatives
+nnoremap ß `
+nnoremap ö @
+inoremap üü {}<left>
+inoremap öö []<left>
