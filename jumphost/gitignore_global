@@ -1,0 +1,6 @@
+**/.idea
+*.iml
+**/.bundle
+**/vendor
+**/.venv
+**/.pc

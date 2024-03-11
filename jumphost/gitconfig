@@ -1,0 +1,12 @@
+[user]
+	email = christoph.raab@schleupen.de
+	name = Christoph Raab
+[core]
+	editor = vim
+	excludesfile = /home/craab/.gitignore_global
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true
+[init]
+	defaultBranch = main
