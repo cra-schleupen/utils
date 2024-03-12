@@ -1,0 +1,1 @@
+45 19 * * * root /usr/sbin/shutdown -h now # shutdown at 20:45
