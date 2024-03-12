@@ -1,0 +1,14 @@
+Host jumphost
+  User craab
+  HostName 10.240.250.167
+  IdentityFile ~/.ssh/id_ed25519
+  ProxyCommand aws ec2-instance-connect open-tunnel --instance-id i-005e38ffeaee11fcf --profile sse-prod-devops
+
+Host github-personal
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_prv
+
+Host *
+  IdentityFile ~/.ssh/id_ed25519
+
